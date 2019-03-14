@@ -2,7 +2,7 @@ version: '3'
 services:
   app:
     build:
-      context: ./project
+      context: ./
       dockerfile: ./Dockerfile
     image: digitalocean.com/php
     container_name: app
@@ -30,7 +30,7 @@ services:
     networks:
       - app-network
   db:
-    image: mysql:5.7.22
+    build: ./mysql
     container_name: db
     restart: unless-stopped
     tty: true
@@ -42,8 +42,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
-      - dbdata:/var/lib/mysql
-      - ./mysql/my.cnf:/etc/mysql/my.cnf
+      - ./dbdata:/var/lib/mysql
     networks:
       - app-network
 networks:
