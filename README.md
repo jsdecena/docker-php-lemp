@@ -22,7 +22,7 @@ composer create-project --prefer-dist laravel/lumen .
 
 - Move to the root folder and run `docker-compose up -d`
 
-- Open your browser and go to [http://localhost:81](http://localhost:81)
+- Open your browser and go to [http://localhost:8000](http://localhost:8000)
 
 - Enjoy!
 
