@@ -1,4 +1,6 @@
 # Simplified dockerized php application
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp?ref=badge_shield)
+
 
 ## How to Install
 
@@ -41,3 +43,6 @@ composer create-project --prefer-dist laravel/lumen .
   
 # Author
 [Jeff Simons Decena](https://jsdecena.me)
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp?ref=badge_large)
