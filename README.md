@@ -1,6 +1,9 @@
 # Simplified dockerized php application
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp?ref=badge_shield)
 
+## PHP versioning
+- Use v1.0.0 - php 7.2
+- Use v1.1.0 - php 7.4 - current
 
 ## How to Install
 

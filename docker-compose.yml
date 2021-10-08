@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: jsdecena/php72-fpm
+    image: jsdecena/php74-fpm
     container_name: app
     restart: unless-stopped
     tty: true
