@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: jsdecena/php74-fpm
+    build: .
     container_name: app
     restart: unless-stopped
     tty: true
@@ -27,22 +27,17 @@ services:
     networks:
       - app-network
   db:
-    image: mysql:5.7
-    container_name: db
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "3306:3306"
+    container_name: database
+    image: postgres:13.4
+    restart: always
     environment:
-      MYSQL_DATABASE: homestead
-      MYSQL_USER: homestead
-      MYSQL_ROOT_PASSWORD: secret
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: homestead
+    ports:
+      - "5432:5432"
     volumes:
-      - ./dbdata:/var/lib/mysql
-    networks:
-      - app-network
+      - ./db:/var/lib/postgresql/data
 networks:
   app-network:
     driver: bridge
