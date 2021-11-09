@@ -3,7 +3,8 @@
 
 ## PHP versioning
 - Use v1.0.0 - php 7.2
-- Use v1.1.0 - php 7.4 - current
+- Use v1.1.0 - php 7.4
+- Use v2.0.0 - php 8.0 - current
 
 ## How to Install
 
