@@ -34,11 +34,11 @@ composer create-project --prefer-dist laravel/lumen .
 
 ## FAQ
 
-- Why port 81?
-  - Sometimes you want your backend and frontend separated. You can have your frontend runs in the default `:80` and the API to be in port `:81`
+- Why port 8000?
+  - Sometimes you want your backend and frontend separated. You can have your frontend runs in the default `:80` and the API to be in port `:8000`
   
 - Can we change this port?
-  - Yes. You can change the port in the webserver block of the `docker-compose.yml` file
+  - Yes. You can change the port in the `webserver` block of the `docker-compose.yml` file
   
 - Is everything customizable?
   - Yes. You can fiddle the `docker-compose.yml` file and make your own customization. Be sure you know what you are doing.
