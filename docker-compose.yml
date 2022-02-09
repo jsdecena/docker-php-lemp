@@ -2,7 +2,7 @@ version: '3'
 services:
   app:
     image: jsdecena/php8-fpm:8.0.13
-    container_name: app
+    container_name: ${APP_NAME}
     restart: unless-stopped
     tty: true
     environment:
@@ -16,7 +16,7 @@ services:
       - app-network
   webserver:
     image: nginx:alpine
-    container_name: webserver
+    container_name: ${WEBSERVER_NAME}
     restart: unless-stopped
     tty: true
     ports:
@@ -27,7 +27,7 @@ services:
     networks:
       - app-network
   db:
-    container_name: database
+    container_name: ${DATABASE_NAME}
     image: postgres:13.4
     restart: always
     environment:
