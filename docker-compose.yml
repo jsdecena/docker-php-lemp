@@ -20,7 +20,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "8000:8000"
+      - "${APP_PORT}:8000"
     volumes:
       - ./project:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
@@ -35,7 +35,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: homestead
     ports:
-      - "5432:5432"
+      - "${DB_PORT}:5432"
     volumes:
       - ./db:/var/lib/postgresql/data
     networks:
