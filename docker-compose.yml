@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: jsdecena/php8-fpm:0.13
+    image: jsdecena/php8-fpm:8.0.13
     container_name: app
     restart: unless-stopped
     tty: true
