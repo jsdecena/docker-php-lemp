@@ -26,6 +26,8 @@ OR
 composer create-project --prefer-dist laravel/lumen .
 ```
 
+- Rename root `.env.example` to `.env`
+
 - Move to the root folder and run `docker-compose up -d`
 
 - Open your browser and go to [http://localhost:8000](http://localhost:8000)
