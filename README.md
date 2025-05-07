@@ -1,10 +1,5 @@
-# Simplified dockerized php application
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp?ref=badge_shield)
-
-## PHP versioning
-- Use v1.0.0 - php 7.2
-- Use v1.1.1 - php 7.4
-- Use v2.0.0 - php 8.0 - current
+# EARN Accounting Software
+DAD custom accounting software
 
 ## How to Install
 
@@ -12,43 +7,14 @@
 
 - Install composer [here](https://getcomposer.org/doc/00-intro.md) if you haven't
 
-- Clone your app inside the `project` folder. It must have `/public` folder since the webserver looks for the index here
+- - In the `project/`, rename `.env.example` to `.env`
 
-  - A new laravel / lumen application can be installed with:
+- Move to the root folder and run `cd projects && docker-compose up -d`
 
-```php
-composer create-project --prefer-dist laravel/laravel .
-```
+- Go inside the docker container: `docker exec -it app sh`
 
-OR
-
-```php
-composer create-project --prefer-dist laravel/lumen .
-```
-
-- Rename root `.env.example` to `.env`
-
-- Move to the root folder and run `docker-compose up -d`
+- Once inside, run `composer install && php artisan fresh && php artisan db:seed`
 
 - Open your browser and go to [http://localhost:8000](http://localhost:8000)
 
 - Enjoy!
-
-## FAQ
-
-- Why port 8000?
-  - Sometimes you want your backend and frontend separated. You can have your frontend runs in the default `:80` and the API to be in port `:8000`
-  
-- Can we change this port?
-  - Yes. You can change the port in the `webserver` block of the `docker-compose.yml` file
-  
-- Is everything customizable?
-  - Yes. You can fiddle the `docker-compose.yml` file and make your own customization. Be sure you know what you are doing.
-  
-  
-  
-# Author
-[Jeff Simons Decena](https://jsdecena.me)
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjsdecena%2Fdocker-php-lemp?ref=badge_large)
