@@ -1,5 +1,4 @@
-# EARN Accounting Software
-DAD custom accounting software
+# DOCKER PHP LEMP
 
 ## How to Install
 
