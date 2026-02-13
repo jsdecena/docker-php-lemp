@@ -1,6 +1,7 @@
 services:
   app:
     image: jsdecena/php8-fpm:latest
+    platform: linux/amd64
     container_name: ${APP_NAME}
     restart: unless-stopped
     tty: true
